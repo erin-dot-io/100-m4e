@@ -1,0 +1,15 @@
+$white : #fff6ed;
+
+@mixin respond-to($screen) {
+  @if $screen == 'wide' {@media (min-width: 1025px) {@content;}}
+  @else if $screen == 'desktop' {@media (max-width: 1000px) {@content;}}
+  @else if $screen == 'tablet' {@media (max-width: 768px) {@content;}}
+  @else if $screen == 'phone' {@media (max-width: 479px) {@content;}}
+  @else if $screen == 'screen-11' {@media (max-height: 600px) {@content;}}
+  @else if $screen == 'screen-13' {@media (max-height: 790px) {@content;}}
+  @else if $screen == 'retina' {
+    @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+      @content;
+    }
+  }
+}
