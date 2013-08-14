@@ -1,16 +1,14 @@
 <?php
-$user = $_POST['user'];
 $pass = $_POST['pass'];
 
-if($user == "100yrs"
-&& $pass == "edkeeffe")
+if($pass == "ahundredyears")
 {
         include("home.html");
 }
 if(isset($_POST))
 {?>
 
-        <form method="POST" action="secure.php">
+        <form method="POST" action="index.php">
         User <input type="TEXT" name="user"></input>
         Pass <input type="TEXT" name="pass"></input>
         <input type="submit" name="submit"></input>
