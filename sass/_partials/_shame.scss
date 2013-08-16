@@ -85,7 +85,7 @@ header {
 }
 
 div.container {
-  @include outer-container;
+  @include clearfix;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -174,9 +174,9 @@ button, .btn {
   background-position: -200px 0px;
   background-size: cover;
   @include transition(background-position 450ms ease, background-size 450ms ease);
-  &.row-title, &.row-story-footer {
-    background-position: -200px 0px;
-    background-size: 210%;
+  &.row-title, &.row-story-footer, &.row-moment-13 {
+    background-position: -200px 0;
+    background-size: 220%;
   }
   &.row-moment-1 {
     background-position: -100px 0px;
@@ -225,10 +225,6 @@ button, .btn {
   &.row-moment-12 {
     background-position: -200px -300px;
     background-size: 500%;
-  }
-  &.row-moment-13 {
-    background-position: -200px 0px;
-    background-size: 210%;
   }
 }
 
