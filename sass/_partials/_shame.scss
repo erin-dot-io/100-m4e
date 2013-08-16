@@ -1,0 +1,181 @@
+$rule         : #ddd;
+$rule-shadow  : rgba(black, .15);
+$blue         : #3eabf8;
+$red          : #f9544a;
+$red-dark     : #c3302f;
+$red-light    : #f79f9c;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "museo-slab", serif;
+  line-height: 1.3;
+  color: #555;
+}
+
+h1 {font-size: 52px;}
+
+p {
+  font-family: Courier;
+  font-family: "chaparral-pro", serif;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #333;
+}
+
+a {
+  color: $red;
+}
+
+#{$all-text-inputs} {
+  margin: 0;
+  padding: 4px;
+  border-radius: 2px;
+  border: 2px solid $rule;
+}
+
+#{$all-text-inputs-hover} {
+  outline: none;
+}
+
+#{$all-text-inputs-focus} {
+  outline: none;
+  @include placeholder {
+    color: #ddd;
+  }
+}
+
+.gate-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -150px;
+}
+
+header {
+  @include clearfix;
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+  border-bottom: 2px solid $rule-shadow;
+  h1, h5 {margin: 0;}
+  h5 {
+    padding: 12px 0 0 5px;
+    font-style: italic;
+    font-weight: 400;
+    color: $red-light;
+  }
+}
+
+div.container {
+  @include outer-container;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header-wrap {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.nav-left {
+  @include span-columns(5 of 12, ltr);
+}
+
+.nav-right {
+  @include span-columns(7 of 12, rtl);
+}
+
+.logo {
+  font-family: "museo-slab", serif;
+  line-height: 1.3;
+  color: #555;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  position: relative;
+  top: 1px;
+  margin-right: 5px;
+}
+
+button, .btn {
+  display: inline-block;
+  position: relative;
+  padding: 5px 12px;
+  border: 2px solid $red-light;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+  color: $red;
+  border-radius: 2px;
+  &:active {
+    top: 1px;
+  }
+  &.right {margin-left: 5px;}
+}
+
+.btn-link {
+  padding: 7px 14px;
+  font-weight: normal;
+  border: none;
+}
+
+.btn-primary {
+  padding: 7px 14px;
+  border: none;
+  background-color: $red;
+  color: white;
+  text-shadow: 0 1px 0 $red-dark;
+}
+
+.story-wrapper {
+  position: relative;
+  z-index: 20;
+  width: 70%;
+}
+
+.map-wrapper {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  @include background(url("/images/map.jpg"));
+  background-repeat: no-repeat;
+  background-position: -200px 0px;
+  background-size: 200%;
+}
+
+.map-top-nav {
+  height: 80px;
+  padding: 5px;
+  @include background-image(linear-gradient(rgba(black, .5), rgba(black, 0)));
+  .logo {color: white}
+}
+
+
+.video {
+  position: relative;
+  padding-bottom: 56%;
+  height: 0;
+}
+
+.video-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: teal;
+}
+
+
+
+
+
+
+
+.left {float: left;}
+.right {float: right;}
